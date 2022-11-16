@@ -28,13 +28,22 @@
           <div class="form-group">
             <label for="formGroupExampleInput2">Rol</label>
             <input
-              v-model="aporte"
+              v-model="rol"
               type="text"
               class="form-control"
               placeholder="cajero"
             />
           </div>
-          <button class="btn btn-primary" @click="addPersona">
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Cedula</label>
+            <input
+              v-model="cedula"
+              type="text"
+              class="form-control"
+              placeholder="ej. 1097..."
+            />
+          </div>
+          <button class="btn btn-primary" @click="addPersonal">
             A&ntilde;adir
           </button>
         </div>
@@ -54,27 +63,27 @@
       const store = useStore()
       const router = useRouter()
       const nombre = ref("")
-      const codigo = ref("")
       const email = ref("")
-      const aporte = ref("")
+      const rol = ref("")
+      const cedula = ref("")
       
-      function addPersona(){
-        if(nombre.value != '' && email.value != "" && codigo.value != ""){
-          const persona = {
+      function addPersonal(){
+        if(nombre.value != '' && email.value != "" && rol.value != "" && cedula.value != ""){
+          const personal = {
             nombre:nombre.value,
-            codigo:codigo.value,
             email:email.value,
-            aporte:aporte.value
+            rol:rol.value,
+            cedula:cedula.value,
           }
           /* store.dispatch("addPersona", persona);
           router.push('/print') */
-          axios.post('https://vuexjdrg-default-rtdb.firebaseio.com/persona.json',persona)
+          axios.post('https://vuexjdrg-default-rtdb.firebaseio.com/personal.json',personal)
           .then(res => console.log(res))
           .catch(error => console.log(error))
         }
       }
   
-      return{nombre,codigo, email, aporte, addPersona}
+      return{nombre, email, rol, cedula, addPersonal}
     }
     // data() {
     //   return {

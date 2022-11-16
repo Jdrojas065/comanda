@@ -26,8 +26,8 @@ export default {
           id:id,
           nombre: res.data[id].nombre,
           codigo: res.data[id].codigo,
-          mail: res.data[id].email,
-          aporte: res.data[id].aporte,
+          /* mail: res.data[id].email, */
+          precio: res.data[id].precio,
         })
       }
     })

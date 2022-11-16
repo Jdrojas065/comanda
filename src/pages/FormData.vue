@@ -37,7 +37,7 @@
         <div class="form-group">
           <label for="formGroupExampleInput2">Precio</label>
           <input
-            v-model="aporte"
+            v-model="precio"
             type="text"
             class="form-control"
             placeholder="$0000"
@@ -65,15 +65,15 @@ export default {
     const nombre = ref("")
     const codigo = ref("")
     // const email = ref("")
-    const aporte = ref("")
+    const precio = ref("")
     
     function addPersona(){
-      if(nombre.value != '' && codigo.value != ""){
+      if(nombre.value != '' && codigo.value != "" && precio.value != ""){
         const persona = {
           nombre:nombre.value,
           codigo:codigo.value,
           // email:email.value,
-          aporte:aporte.value
+          precio:precio.value
         }
         /* store.dispatch("addPersona", persona);
         router.push('/print') */
@@ -83,7 +83,7 @@ export default {
       }
     }
 
-    return{nombre,codigo, aporte, addPersona}
+    return{nombre,codigo, precio, addPersona}
   }
   // data() {
   //   return {

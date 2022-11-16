@@ -4,9 +4,8 @@
       <h5 class="card-header">{{ persona.nombre }}</h5>
       <div class="card-body">
         <div class="card-text">
-          <p>Mail : {{persona.email}}</p>
           <p>Codigo Producto : {{persona.codigo}}</p>
-          <p>Aporte : {{persona.aporte}}</p>
+          <p>Precio : {{persona.precio}}</p>
         </div>
        
       </div>
@@ -33,7 +32,7 @@ export default {
     const persona = ref("")
 
     /* const persona = computed(()=>{ */
-      const index = route.params.index;
+      const index = route;
       /* return store.getters.getPersona(index);
     }) */
     axios.get('https://vuexjdrg-default-rtdb.firebaseio.com/persona/'+index+'.json')
