@@ -1,10 +1,10 @@
 <template>
     <div>
-      <h3>A&ntilde;adir invitados</h3>
+      <h3>A&ntilde;adir personal</h3>
   
       <div class="card" style="width: 35rem">
         <div class="card-body">
-          <h5 class="card-title">Datos Invitado</h5>
+          <h5 class="card-title">Datos Personal</h5>
   
           <div class="form-group">
             <label for="formGroupExampleInput">Nombre</label>
@@ -12,7 +12,7 @@
               v-model="nombre"
               type="text"
               class="form-control"
-              placeholder="Armando Agudelo"
+              placeholder="Armando Casas"
             />
           </div>
           <div class="form-group">
@@ -21,17 +21,17 @@
               v-model="email"
               type="text"
               class="form-control"
-              placeholder="aagudelo@elemail.com"
+              placeholder="aagudelo@email.com"
             />
           </div>
           
           <div class="form-group">
-            <label for="formGroupExampleInput2">Aporta</label>
+            <label for="formGroupExampleInput2">Rol</label>
             <input
               v-model="aporte"
               type="text"
               class="form-control"
-              placeholder="cer-ve-za ?"
+              placeholder="cajero"
             />
           </div>
           <button class="btn btn-primary" @click="addPersona">
