@@ -14,7 +14,12 @@
         </li>
         <li class="nav-item">
           <router-link to="/perso" class="nav-link" active-class="active"
-            > Personal </router-link
+            > Registro Personal </router-link
+          >
+        </li>
+        <li class="nav-item">
+          <router-link to="/persoData" class="nav-link" active-class="active"
+            >Personal</router-link
           >
         </li>
       </ul>

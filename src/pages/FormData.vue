@@ -1,20 +1,12 @@
 <template>
   <div>
-    <h3>A&ntilde;adir invitados</h3>
+    <h3>A&ntilde;adir productos</h3>
 
     <div class="card" style="width: 35rem">
       <div class="card-body">
         <h5 class="card-title">Datos Producto</h5>
 
-        <div class="form-group">
-          <label for="formGroupExampleInput">Nombre</label>
-          <input
-            v-model="nombre"
-            type="text"
-            class="form-control"
-            placeholder="Armando Agudelo"
-          />
-        </div>
+        
         <div class="form-group">
           <label for="formGroupExampleInput">Codigo</label>
           <input
@@ -25,21 +17,30 @@
           />
         </div>
         <div class="form-group">
-          <label for="formGroupExampleInput2">E-mail</label>
+          <label for="formGroupExampleInput">Nombre</label>
+          <input
+            v-model="nombre"
+            type="text"
+            class="form-control"
+            placeholder="Ingrese Nombre del Producto"
+          />
+        </div>
+        <div class="form-group">
+          <!-- <label for="formGroupExampleInput2">E-mail</label>
           <input
             v-model="email"
             type="text"
             class="form-control"
-            placeholder="aagudelo@elemail.com"
-          />
+            placeholder="aagudelo@gmail.com"
+          /> -->
         </div>
         <div class="form-group">
-          <label for="formGroupExampleInput2">Aporta</label>
+          <label for="formGroupExampleInput2">Precio</label>
           <input
-            v-model="aporte"
+            v-model="precio"
             type="text"
             class="form-control"
-            placeholder="cer-ve-za ?"
+            placeholder="$0000"
           />
         </div>
         <button class="btn btn-primary" @click="addPersona">
@@ -62,15 +63,17 @@ export default {
     const store = useStore()
     const router = useRouter()
     const nombre = ref("")
-    const email = ref("")
-    const aporte = ref("")
+    const codigo = ref("")
+    // const email = ref("")
+    const precio = ref("")
     
     function addPersona(){
-      if(nombre.value != '' && email.value != ""){
+      if(nombre.value != '' && codigo.value != "" && precio.value != ""){
         const persona = {
           nombre:nombre.value,
-          email:email.value,
-          aporte:aporte.value
+          codigo:codigo.value,
+          // email:email.value,
+          precio:precio.value
         }
         /* store.dispatch("addPersona", persona);
         router.push('/print') */
@@ -80,7 +83,7 @@ export default {
       }
     }
 
-    return{nombre, email, aporte, addPersona}
+    return{nombre,codigo, precio, addPersona}
   }
   // data() {
   //   return {

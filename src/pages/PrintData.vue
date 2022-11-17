@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Lista de invitados</h3>
+    <h3>Lista de productos</h3>
 
     <ul class="list-group">
       <li v-for="(persona, i) in personas" :key="i"  class="list-group-item">
@@ -26,8 +26,8 @@ export default {
           id:id,
           nombre: res.data[id].nombre,
           codigo: res.data[id].codigo,
-          mail: res.data[id].email,
-          aporte: res.data[id].aporte,
+          /* mail: res.data[id].email, */
+          precio: res.data[id].precio,
         })
       }
     })
