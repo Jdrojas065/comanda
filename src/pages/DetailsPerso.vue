@@ -22,7 +22,7 @@
   <script>
   /* import {computed} from 'vue' */
   /* import {useStore} from 'vuex' */
-  import {useRouter} from 'vue-router'
+  import {useRoute} from 'vue-router'
   import {ref} from 'vue'
   import axios from 'axios'
   
@@ -31,7 +31,7 @@
     setup(){
       
       /* const store = useStore() */
-      const route = useRouter()
+      const route = useRoute()
       const personal = ref("")
   
       /* const persona = computed(()=>{ */

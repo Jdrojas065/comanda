@@ -3,6 +3,16 @@
     <div class="container">
       <ul class="nav">
         <li class="nav-item">
+          <router-link to="/regislog" class="nav-link" active-class="active"
+            >Registro Usuarios</router-link
+          >
+        </li>
+        <li class="nav-item">
+          <router-link to="/log" class="nav-link" active-class="active"
+            >login</router-link
+          >
+        </li>
+        <li class="nav-item">
           <router-link to="/" class="nav-link" active-class="active"
             >Registro Productos</router-link
           >

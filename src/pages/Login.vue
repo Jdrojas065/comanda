@@ -1,6 +1,6 @@
 <template>
  <div :style="mainStyle"> 
-        <h1>Bienvenidos!{{nombreusuario}}</h1>
+        <h1>Bienvenido {{nombreusuario}}!</h1>
     <div class="form-group">
     <input
     v-model="nombreusuario"
