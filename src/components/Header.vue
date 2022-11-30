@@ -13,7 +13,7 @@
           >
         </li>
         <li class="nav-item" v-if="verificar">
-          <router-link to="/" class="nav-link" active-class="active"
+          <router-link to="/prod" class="nav-link" active-class="active"
             >Registro Productos</router-link
           >
         </li>
@@ -32,7 +32,8 @@
             >Personal</router-link
           >
         </li>
-        <button >Cerrar Sesion</button>
+        <button><a href="./log">cerrar sesion</a></button>
+
       </ul>
     </div>
   </nav>
@@ -49,8 +50,8 @@ export default {
   computed:{
     verificar(){
       return this.$store.state.mostrar
-    }
-  }
+    },
+  },
 }
 </script>
 

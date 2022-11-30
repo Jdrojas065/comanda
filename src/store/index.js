@@ -5,7 +5,7 @@ export const store = createStore({
         personas:[{nombre:'', email:'', aporte:''}],
         personal:[{nombre:''}],
         productos:[{codigo:''}],
-        mostrar:false
+        mostrar:false,
     },
     getters:{
         getPersonas:state => {

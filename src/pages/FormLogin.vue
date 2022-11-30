@@ -54,7 +54,7 @@
           }
           /* store.dispatch("addPersona", persona);
           router.push('/print') */
-          axios.post('https://vuexjdrg-default-rtdb.firebaseio.com/persona.json',personal)
+          axios.post('https://ml2022-1e1b9-default-rtdb.firebaseio.com/persona.json',personal)
           .then(res => console.log(res))
           .catch(error => console.log(error))
         }

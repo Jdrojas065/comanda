@@ -60,7 +60,7 @@ export default {
 
     methods: {
         buscarUsuario(){
-            axios.get('https://vuexjdrg-default-rtdb.firebaseio.com/persona.json')
+            axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/persona.json')
             .then(res=>{
                 console.log(res);
 console.log(this.nombreusuario ,"usuario")
@@ -77,7 +77,7 @@ console.log(this.nombreusuario ,"password")
               }
               if(this.usuarios.length >=1){
                 this.$store.state.mostrar = true
-                this.router.push("/")
+                /* this.router.push("/regisLog") */
               }else{
                 alert("Usuario y Contraseña incorrecto")
               }

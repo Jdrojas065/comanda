@@ -77,7 +77,7 @@ export default {
         }
         /* store.dispatch("addPersona", persona);
         router.push('/print') */
-        axios.post('https://vuexjdrg-default-rtdb.firebaseio.com/producto.json',persona)
+        axios.post('https://ml2022-1e1b9-default-rtdb.firebaseio.com/producto.json',persona)
         .then(res => console.log(res))
         .catch(error => console.log(error))
       }

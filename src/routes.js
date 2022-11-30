@@ -9,7 +9,7 @@ import RegisLog from './pages/FormLogin.vue'
 import Header from './components/Header.vue'
 
 export const routes = [
-    {path:'/', component:FormData},
+    {path:'/prod', component:FormData},
     {path:'/print', component:PrintData},
     {path:'/details/:index', component:Details},
     {path:'/perso', component:Personal},

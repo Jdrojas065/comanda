@@ -18,7 +18,7 @@ import {ref} from 'vue'
 export default {
   setup(){
     const personas = ref([])
-    axios.get('https://vuexjdrg-default-rtdb.firebaseio.com/persona.json')
+    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/persona.json')
     .then(res=>{
       console.log(res)
       for(const id in res.data){
