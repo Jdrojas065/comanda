@@ -35,6 +35,7 @@
 <script>
 import { ref } from 'vue'
 import axios from 'axios'
+import { useRouter } from 'vue-router';
 
 export default {
     name: "Login",
@@ -45,17 +46,19 @@ export default {
     },
 
     setup() {
+        const router = useRouter()
         const usuarios = ref([])
         const nombreusuario = ref("")
         const password = ref("")
         function buscarUsuario(){
-            axios.get('https://vueinventarioaxios-default-rtdb.firebaseio.com/usuarios.json')
+            axios.get('https://vuexjdrg-default-rtdb.firebaseio.com/persona.json')
             .then(res=>{
                 console.log(res);
-
+console.log(nombreusuario.value ,"usuario")
+console.log(nombreusuario.value ,"password")
               for(const id in res.data){
 
-                if(res.data[id].nombre === nombreusuario.value && res.data[id].password === password.value){
+                if(res.data[id].nombreusuario === nombreusuario.value && res.data[id].contra === password.value){
                     usuarios.value.push({
                         id: id,
                         nombre: res.data[id].nombre,
@@ -64,7 +67,8 @@ export default {
                 }
               }
               if(usuarios.value.length >=1){
-                alert("Usuario y Contraseña Correcto")
+                alert("usuario correcto")
+                router.push("/head")
               }else{
                 alert("Usuario y Contraseña incorrecto")
               }

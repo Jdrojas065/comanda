@@ -1,11 +1,12 @@
-import FormData from './pages/FormData.vue'
-import PrintData from './pages/PrintData.vue'
-import Details from './pages/Details.vue'
-import Personal from './pages/Personal.vue'
+import FormData from './pages/FormProductos.vue'
+import PrintData from './pages/ProductosData.vue'
+import Details from './pages/DetailsProducto.vue'
+import Personal from './pages/FormPersonal.vue'
 import PersonalData from './pages/PersonalData.vue'
-import DetailsPerso from './pages/DetailsPerso.vue'
+import DetailsPerso from './pages/DetailsPersonal.vue'
 import Login from './pages/Login.vue'
-import RegisLog from './pages/RegisLog.vue'
+import RegisLog from './pages/FormLogin.vue'
+import Header from './components/Header.vue'
 
 export const routes = [
     {path:'/', component:FormData},
@@ -16,4 +17,5 @@ export const routes = [
     {path:'/detailsPerso/:index', component:DetailsPerso},
     {path:'/log', component:Login},
     {path:'/regislog', component:RegisLog},
+    {path:'/head', component:Header},
 ]

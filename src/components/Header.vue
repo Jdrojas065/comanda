@@ -8,11 +8,6 @@
           >
         </li>
         <li class="nav-item">
-          <router-link to="/log" class="nav-link" active-class="active"
-            >login</router-link
-          >
-        </li>
-        <li class="nav-item">
           <router-link to="/" class="nav-link" active-class="active"
             >Registro Productos</router-link
           >
