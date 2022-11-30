@@ -1,5 +1,6 @@
 <template>
  <div :style="mainStyle"> 
+  <form v-on:submit.prevent="login">
         <h1>Bienvenido {{nombreusuario}}!</h1>
     <div class="form-group">
     <input
@@ -26,6 +27,7 @@
        ingresar
     </button>
      </div>
+    </form>
 </div>
 </template>
 
@@ -40,45 +42,49 @@ import { useRouter } from 'vue-router';
 export default {
     name: "Login",
 
+    data(){
+      return{
+       router : useRouter(),
+       usuarios : ref([]),
+       nombreusuario : ref(""),
+        password : ref(""),
+      }
+
+
+    },
+
     props:{
         mainStyle: String,
         inpuStyle: String,
     },
 
-    setup() {
-        const router = useRouter()
-        const usuarios = ref([])
-        const nombreusuario = ref("")
-        const password = ref("")
-        function buscarUsuario(){
+    methods: {
+        buscarUsuario(){
             axios.get('https://vuexjdrg-default-rtdb.firebaseio.com/persona.json')
             .then(res=>{
                 console.log(res);
-console.log(nombreusuario.value ,"usuario")
-console.log(nombreusuario.value ,"password")
+console.log(this.nombreusuario ,"usuario")
+console.log(this.nombreusuario ,"password")
               for(const id in res.data){
 
-                if(res.data[id].nombreusuario === nombreusuario.value && res.data[id].contra === password.value){
-                    usuarios.value.push({
+                if(res.data[id].nombreusuario === this.nombreusuario && res.data[id].contra === this.password){
+                    this.usuarios.push({
                         id: id,
                         nombre: res.data[id].nombre,
                         password: res.data[id].password,
                     })
                 }
               }
-              if(usuarios.value.length >=1){
-                alert("usuario correcto")
-                router.push("/head")
+              if(this.usuarios.length >=1){
+                this.$store.state.mostrar = true
+                this.router.push("/")
               }else{
                 alert("Usuario y Contraseña incorrecto")
               }
-              usuarios.value= [];
-
+              this.usuarios.value= [];
             })
             .catch(error => console.log(error))
         }
-        return {nombreusuario,password,usuarios,buscarUsuario};
-        
     }
 };
 </script>

@@ -4,7 +4,7 @@ import Details from './pages/DetailsProducto.vue'
 import Personal from './pages/FormPersonal.vue'
 import PersonalData from './pages/PersonalData.vue'
 import DetailsPerso from './pages/DetailsPersonal.vue'
-import Login from './pages/Login.vue'
+import Login from './components/Login.vue'
 import RegisLog from './pages/FormLogin.vue'
 import Header from './components/Header.vue'
 

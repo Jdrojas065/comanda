@@ -1,19 +1,17 @@
 <template>
-  <Login>
   <app-header class="mb-3" />
+
   <div class="container"><router-view /></div>
-  </Login> 
 </template>
 
 <script>
 import Header from "./components/Header";
-import Login from "./pages/Login";
+
 
 export default {
   name: "App",
   components: {
     "app-header": Header,
-    Login,
   },
 };
 </script>
