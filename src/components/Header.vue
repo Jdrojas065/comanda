@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-light nav-pills" style="background-color: #e3f2fd">
+  <nav class="navbar navbar-light nav-pills" style="background: linear-gradient(to right, #5b2b03 8%, #c54e04 100%);">
     <div class="container">
       <ul class="nav">
         <li class="nav-item">
@@ -32,7 +32,10 @@
             >Personal</router-link
           >
         </li>
-        <button><a href="./log">cerrar sesion</a></button>
+        <li class="nav-item" v-if="verificar">
+          <a class="nav-link" href="./log">Cerrar Sesion</a>
+        </li>
+        
 
       </ul>
     </div>
@@ -56,8 +59,35 @@ export default {
 </script>
 
 <style>
-button{
-  border: bold;
-  left: 100%;
+a{
+color:rgb(255, 255, 255)
+}
+a:hover{
+  color:rgb(235, 235, 235)
+  }
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  color: rgb(0, 0, 0);
+  background-color: #f7c295;
+  border-color: #8d430e;
+}
+.form-control{
+  color: #FFF;
+  background-color: #db8e49;
+  border-color: #a24b0d;
+}
+.form-control:hover{
+  color: #FFF;
+  background-color: #db8e49;
+  border-color: #a24b0d;
+}
+.btn-primary{
+  color: #FFF;
+  background-color: #e37719;
+  border-color: #a24b0d
+}
+.btn-primary:hover{
+  color: rgb(0, 0, 0);
+  background-color:  #ca6c1a;
+  border-color:  #8d430e;
 }
 </style>
