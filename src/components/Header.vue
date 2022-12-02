@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-light nav-pills" style="background: linear-gradient(to right, #5b2b03 8%, #c54e04 100%);">
-    <div class="container">
+    <div class="con1"> 
       <ul class="nav">
         <li class="nav-item">
           <router-link to="/log" class="nav-link" active-class="active"
@@ -35,11 +35,10 @@
         <li class="nav-item" v-if="verificar">
           <a class="nav-link" href="./log">Cerrar Sesion</a>
         </li>
-        
-
       </ul>
     </div>
   </nav>
+
 </template>
 
 <script>
@@ -90,4 +89,15 @@ a:hover{
   background-color:  #ca6c1a;
   border-color:  #8d430e;
 }
+.btn-primary:link{
+  color: rgb(0, 0, 0);
+  background-color:  #ca6c1a;
+  border-color:  #8d430e;
+}
+.btn-primary:active{
+  color: rgb(0, 0, 0);
+  background-color:  #ca6c1a;
+  border-color:  #8d430e;
+}
+
 </style>

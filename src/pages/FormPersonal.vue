@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="con">
       <h3>A&ntilde;adir personal</h3>
   
       <div class="card" style="width: 35rem">
