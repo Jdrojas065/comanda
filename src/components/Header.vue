@@ -13,6 +13,11 @@
           >
         </li>
         <li class="nav-item" v-if="verificar">
+          <router-link to="/Comanda" class="nav-link" active-class="active"
+            >Comanda</router-link
+          >
+        </li>
+        <li class="nav-item" v-if="verificar">
           <router-link to="/prod" class="nav-link" active-class="active"
             >Registro Productos</router-link
           >

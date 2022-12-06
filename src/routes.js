@@ -7,6 +7,9 @@ import DetailsPerso from './pages/DetailsPersonal.vue'
 import Login from './components/Login.vue'
 import RegisLog from './pages/FormLogin.vue'
 import Header from './components/Header.vue'
+import Comanda from './pages/Comanda.vue'
+
+
 
 export const routes = [
     {path:'/prod', component:FormData},
@@ -18,4 +21,5 @@ export const routes = [
     {path:'/log', component:Login},
     {path:'/regislog', component:RegisLog},
     {path:'/head', component:Header},
+    {path:'/Comanda', component:Comanda},
 ]
