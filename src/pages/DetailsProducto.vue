@@ -35,7 +35,7 @@ export default {
       const index = route;
       /* return store.getters.getPersona(index);
     }) */
-    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/persona/'+index+'.json')
+    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/producto/'+index+'.json')
     .then(res => {
       console.log(res)
       persona.value = res.data

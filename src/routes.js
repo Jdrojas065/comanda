@@ -7,7 +7,7 @@ import DetailsPerso from './pages/DetailsPersonal.vue'
 import Login from './components/Login.vue'
 import RegisLog from './pages/FormLogin.vue'
 import Header from './components/Header.vue'
-import Comanda from './pages/Comanda.vue'
+import Comanda from './pages/FormComanda.vue'
 
 
 

@@ -18,7 +18,7 @@ import {ref} from 'vue'
 export default {
   setup(){
     const personas = ref([])
-    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/persona.json')
+    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/producto.json')
     .then(res=>{
       console.log(res)
       for(const id in res.data){
@@ -41,3 +41,9 @@ export default {
   }, */
 };
 </script>
+
+<style>
+div{
+color-scheme: black;
+}
+</style>

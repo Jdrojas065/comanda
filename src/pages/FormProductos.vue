@@ -26,13 +26,6 @@
           />
         </div>
         <div class="form-group">
-          <!-- <label for="formGroupExampleInput2">E-mail</label>
-          <input
-            v-model="email"
-            type="text"
-            class="form-control"
-            placeholder="aagudelo@gmail.com"
-          /> -->
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">Precio</label>
@@ -64,7 +57,6 @@ export default {
     const router = useRouter()
     const nombre = ref("")
     const codigo = ref("")
-    // const email = ref("")
     const precio = ref("")
     
     function addPersona(){
@@ -72,11 +64,8 @@ export default {
         const persona = {
           nombre:nombre.value,
           codigo:codigo.value,
-          // email:email.value,
           precio:precio.value
         }
-        /* store.dispatch("addPersona", persona);
-        router.push('/print') */
         axios.post('https://ml2022-1e1b9-default-rtdb.firebaseio.com/producto.json',persona)
         .then(res => console.log(res))
         .catch(error => console.log(error))
@@ -85,25 +74,5 @@ export default {
 
     return{nombre,codigo, precio, addPersona}
   }
-  // data() {
-  //   return {
-  //     nombre: "",
-  //     email: "",
-  //     aporte: "",
-  //   };
-  // },
-  // methods: {
-  //   addPersona() {
-  //     if (this.nombre != "" && this.email != "") {
-  //       const persona = {
-  //         nombre: this.nombre,
-  //         email: this.email,
-  //         aporte: this.aporte,
-  //       };
-  //       this.$store.dispatch("addPersona", persona);
-  //       this.$router.push('/print')
-  //     }
-  //   },
-  // },
 };
 </script>
