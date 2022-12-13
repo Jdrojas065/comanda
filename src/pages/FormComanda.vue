@@ -236,8 +236,8 @@ export default {
      {"name": "Ceviche Peruano"},
      {"name": "Costillitas 250g"},
      {"name": "Costillitas 500g"},
-     {"name": " "},
-     {"name": " "},
+     {"name": "costillas 1500g "},
+     {"name": "limonada de 100l "},
 
   ]
     const searchCountries = computed(() => {

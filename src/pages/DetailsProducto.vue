@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="card" v-if="persona != undefined">
-      <h5 class="card-header">{{ persona.nombre }}</h5>
+    <div class="card" v-if="personas != undefined">
+      <h5 class="card-header">{{ personas.nombre }}</h5>
       <div class="card-body">
         <div class="card-text">
-          <p>Codigo Producto : {{persona.codigo}}</p>
-          <p>Precio : {{persona.precio}}</p>
+          <p>Codigo Producto : {{personas.codigo}}</p>
+          <p>Precio : {{personas.precio}}</p>
         </div>
        
       </div>
@@ -29,19 +29,19 @@ export default {
   setup(){
     /* const store = useStore() */
     const route = useRoute()
-    const persona = ref("")
+    const personas = ref("")
 
     /* const persona = computed(()=>{ */
       const index = route;
       /* return store.getters.getPersona(index);
     }) */
-    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/producto/'+index+'.json')
+    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/producto'+index+'.json')
     .then(res => {
       console.log(res)
-      persona.value = res.data
+      personas.value = res.data
     })
     .catch(error => console.log(error))
-    return {persona}
+    return {personas}
   }
   // computed: {
   //   persona() {

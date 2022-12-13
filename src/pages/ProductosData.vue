@@ -3,9 +3,9 @@
     <h3>Lista de productos</h3>
 
     <ul class="list-group">
-      <li v-for="(persona, i) in personas" :key="i"  class="list-group-item">
-        <router-link :to="`/details/${persona.id}`">{{
-          persona.nombre
+      <li v-for="(personas, i) in personas" :key="i"  class="list-group-item">
+        <router-link :to="`/details/${personas.id}`">{{
+          personas.nombre
         }}</router-link>
       </li>
     </ul>
@@ -18,7 +18,7 @@ import {ref} from 'vue'
 export default {
   setup(){
     const personas = ref([])
-    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/producto.json')
+    axios.get('https://ml2022-1e1b9-default-rtdb.firebaseio.com/producto.json',personas)
     .then(res=>{
       console.log(res)
       for(const id in res.data){
