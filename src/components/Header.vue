@@ -4,7 +4,7 @@
       <ul class="nav">
         <li class="nav-item">
           <router-link to="/log" class="nav-link" active-class="active"
-            >Login</router-link
+            >MI LOCAL</router-link
           >
         </li>
         <li class="nav-item" v-if="verificar">
@@ -78,6 +78,25 @@ a:hover{
   color: #FFF;
   background-color: #db8e49;
   border-color: #a24b0d;
+  
+  
+}
+.form-control1{
+  color: #FFF;
+  background-color: #db8e49;
+  border-color: #a24b0d;
+  width: 50%;
+  display: block;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border: 1px solid #a24b0d;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  
 }
 .form-control:hover{
   color: #FFF;
@@ -104,5 +123,7 @@ a:hover{
   background-color:  #ca6c1a;
   border-color:  #8d430e;
 }
-
+.logo{
+  width:500px,
+}
 </style>

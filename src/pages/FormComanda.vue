@@ -12,7 +12,7 @@
         type="text"
         id="search"
         v-model="searchTerm"
-        placeholder="Type here..."
+        placeholder="Producto..."
         class="p-3 mb-0.5 w-full border border-gray-300 rounded"
       >
      

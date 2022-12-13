@@ -1,4 +1,5 @@
 <template>
+<center>
     <div class="con">
       <h3>A&ntilde;adir personal</h3>
   
@@ -49,6 +50,9 @@
         </div>
       </div>
     </div>
+    </center>
+    <br><br>
+     <center><img class="logo" src="../assets/logo1.png"></center>
   </template>
   
   

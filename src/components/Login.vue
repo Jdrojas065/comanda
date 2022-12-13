@@ -1,13 +1,14 @@
 <template>
+<center>
  <div :style="mainStyle"> 
   <form v-on:submit.prevent="login">
-        <h1>Bienvenido {{nombreusuario}}!</h1>
+        <h1>!Bienvenido {{nombreusuario}}!</h1>
     <div class="form-group">
     <input
     v-model="nombreusuario"
      type="text"
      name="username"
-     class="form-control"
+     class="form-control1"
      placeholder="Usuario"
      :style="input"
      /> 
@@ -17,18 +18,19 @@
     v-model="password"
      type="password"
      name="password"
-     class="form-control"
-     placeholder="contraseña"
+     class="form-control1"
+     placeholder="Contraseña"
      :style="input"
      />
      </div>
      <div class="form-group">
      <button class="btn btn-primary" @click="buscarUsuario">
-       ingresar
+       Ingresar
     </button>
      </div>
     </form>
-</div>
+</div></center>
+<center><img class="logo" src="../assets/logo1.png"></center>
 </template>
 
 
