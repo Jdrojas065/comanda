@@ -68,6 +68,9 @@ export default {
 
 <style>
 a{
+color:rgb(10, 10, 10)
+}
+a.nav-link{
 color:rgb(255, 255, 255)
 }
 a:hover{
