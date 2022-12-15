@@ -1,12 +1,13 @@
 <template>
   <nav class="navbar navbar-light nav-pills" style="background: linear-gradient(to right, #5b2b03 8%, #c54e04 100%);">
-    <div class="con1"> 
+    <div class="con1" > 
       <ul class="nav">
-        <li class="nav-item">
+        <li class="nav-item" >
           <router-link to="/log" class="nav-link" active-class="active"
             >MI LOCAL</router-link
           >
         </li>
+        <ul class="nav1">
         <li class="nav-item" v-if="verificar">
           <router-link to="/regislog" class="nav-link" active-class="active"
             >Registro Usuarios</router-link
@@ -37,9 +38,12 @@
             >Personal</router-link
           >
         </li>
+        <ul class="nav2">
         <li class="nav-item" v-if="verificar">
-          <a class="nav-link" href="./log">Cerrar Sesion</a>
+          <a class="nav-link" href="./log"><img class="logo" src="../assets/salir.png"></a>
         </li>
+        </ul>
+      </ul>
       </ul>
     </div>
   </nav>
@@ -125,5 +129,43 @@ a:hover{
 }
 .logo{
   width:500px,
+}
+.nav1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 400px;
+    margin-bottom: 0;
+    list-style: none;
+    padding-top: 0;
+}
+.nav2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 450px;
+    margin-bottom: 0;
+    list-style: none;
+    padding-top: 0;
+}
+.bar {
+    color: #FFF;
+    background-color: #db8e49;
+    border-color: #a24b0d;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 </style>
